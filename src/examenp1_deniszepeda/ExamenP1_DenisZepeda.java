@@ -15,9 +15,13 @@ public class ExamenP1_DenisZepeda {
     /**
      * @param args the command line arguments
      */
+    
+    //pedro pica piedra 
+    
     public static void main(String[] args) {
         Scanner entry = new Scanner(System.in);
         System.out.println("---MENU---");
+        System.out.println("Pedro");
         System.out.println("1) Binarios a Decimal");
         System.out.println("2) Contains Manual");
         System.out.println("3) Reemplazo de Palabras");

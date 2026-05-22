@@ -16,18 +16,19 @@ public class ExamenP1_DenisZepeda {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner entry = new Scanner (System.in);
+        Scanner entry = new Scanner(System.in);
         System.out.println("---MENU---");
         System.out.println("1) Binarios a Decimal");
+        System.out.println("2) Replace Manual");
         System.out.println("3) Reemplazo de Palabras");
         System.out.println("4) Salir del codigo");
         System.out.println("Ingrese una opcion valida dentro del codigo [1-4]");
         int opc = entry.nextInt();
-        while (opc<=1||opc>=4) {
+        while (opc <= 1 || opc >= 4) {
             System.out.println("Error...Ingreso una opcion fuera del rango");
             System.out.println("---MENU---");
             System.out.println("1) Binarios a Decimal");
-            System.out.println("");
+            System.out.println("2) Replace Manual");
             System.out.println("3) Reemplazo de Palabras");
             System.out.println("4) Salir del codigo");
             System.out.println("Ingrese una opcion valida dentro del codigo [1-4]");
@@ -39,10 +40,10 @@ public class ExamenP1_DenisZepeda {
                 break;
             case 2:
                 entry.nextLine();
-                System.out.println("Ingrese la Primera cadena");
+                System.out.print("Ingrese la Primera cadena");
                 String textoPrincipal = entry.nextLine();
 
-                System.out.println("Ingrese la cadena por buscar");
+                System.out.print("Ingrese la cadena por buscar");
                 String buscar = entry.nextLine();
                 m2(textoPrincipal, buscar);
                 break;
@@ -54,31 +55,52 @@ public class ExamenP1_DenisZepeda {
                 break;
         }
     }
-    
+
     public static void m1() {
         Scanner entry = new Scanner(System.in);
         System.out.println("Binarios a Decimal");
+        System.out.print("Ingrese una cadena Binaria de 8 Caracteres: ");
+        int cantnum = entry.nextInt();
+        int num = entry.nextInt();
+        while (cantnum==8) {            
+            if (num >= 0 || num <= 1) {
+                
+            }
+        }
     }
 
     public static void m2(String textoPrincipal, String buscar) {
         Scanner entry = new Scanner(System.in);
         System.out.println("Contains Manual");
 
-
         boolean subcadena = true;
 
-        if (subcadena == true) {
-            System.out.println("La cadena SI contiene la subcadena");
+        if (subcadena == false) {
+            System.out.print("La cadena SI contiene la subcadena");
         } else {
-            System.out.println("La cadena NO contiene la cadena ");
+            System.out.print("La cadena NO contiene la cadena ");
         }
         
+
     }
 
     public static void m3() {
         Scanner entry = new Scanner(System.in);
         System.out.println("Reemplazo de Palabras");
 
+        System.out.print("Ingrese la Cadena: ");
+        String cadena = entry.nextLine();
 
+        System.out.print("Ingrese la palabra a buscar: ");
+        String search = entry.next();
+
+        System.out.print("Ingrese la palabra de reemplazo: ");
+        String replace = entry.next();
+
+        String WordReplace = cadena.replace(search, replace);
+
+        System.out.println("Resultado: " + WordReplace);
     }
+
 }
+

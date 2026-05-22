@@ -4,6 +4,8 @@
  */
 package examenp1_deniszepeda;
 
+import java.util.Scanner;
+
 /**
  *
  * @author MARY
@@ -14,7 +16,69 @@ public class ExamenP1_DenisZepeda {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner entry = new Scanner (System.in);
+        System.out.println("---MENU---");
+        System.out.println("1) Binarios a Decimal");
+        System.out.println("3) Reemplazo de Palabras");
+        System.out.println("4) Salir del codigo");
+        System.out.println("Ingrese una opcion valida dentro del codigo [1-4]");
+        int opc = entry.nextInt();
+        while (opc<=1||opc>=4) {
+            System.out.println("Error...Ingreso una opcion fuera del rango");
+            System.out.println("---MENU---");
+            System.out.println("1) Binarios a Decimal");
+            System.out.println("");
+            System.out.println("3) Reemplazo de Palabras");
+            System.out.println("4) Salir del codigo");
+            System.out.println("Ingrese una opcion valida dentro del codigo [1-4]");
+            opc = entry.nextInt();
+        }
+        switch (opc) {
+            case 1:
+                m1();
+                break;
+            case 2:
+                entry.nextLine();
+                System.out.println("Ingrese la Primera cadena");
+                String textoPrincipal = entry.nextLine();
+
+                System.out.println("Ingrese la cadena por buscar");
+                String buscar = entry.nextLine();
+                m2(textoPrincipal, buscar);
+                break;
+            case 3:
+                m3();
+                break;
+            case 4:
+                System.out.println("Gracias por usar el programa");
+                break;
+        }
     }
     
+    public static void m1() {
+        Scanner entry = new Scanner(System.in);
+        System.out.println("Binarios a Decimal");
+    }
+
+    public static void m2(String textoPrincipal, String buscar) {
+        Scanner entry = new Scanner(System.in);
+        System.out.println("Contains Manual");
+
+
+        boolean subcadena = true;
+
+        if (subcadena == true) {
+            System.out.println("La cadena SI contiene la subcadena");
+        } else {
+            System.out.println("La cadena NO contiene la cadena ");
+        }
+        
+    }
+
+    public static void m3() {
+        Scanner entry = new Scanner(System.in);
+        System.out.println("Reemplazo de Palabras");
+
+
+    }
 }
